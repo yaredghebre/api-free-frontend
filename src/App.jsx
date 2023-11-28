@@ -1,23 +1,31 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import axios from "axios";
 
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+// Router-dom
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// Pages
+import Home from "./pages/Home";
+import Posts from "./pages/Posts";
+import About from "./pages/About";
+
+// Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Jumbotron from "./components/Jumbotron";
-import Masonry from "./components/Masonry";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <BrowserRouter>
-      <div className="ms_wrapper h-full">
+      <div className="ms_wrapper">
         <Header />
-        <Jumbotron />
-        <Masonry />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
         <Footer />
       </div>
     </BrowserRouter>
