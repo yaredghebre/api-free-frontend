@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Posts = () => {
@@ -17,8 +16,8 @@ const Posts = () => {
   }, []);
 
   return (
-    <div className="bg-green-200 h-screen">
-      <div className="w-full container mx-auto py-11">
+    <div className="bg-green-200 lg:h-screen">
+      <div className="w-1/2 container mx-auto py-11">
         <h1 className="text-center text-4xl font-bold">ALL POSTS</h1>
         <div className="flex flex-wrap justify-center">
           {posts.map((post) => (
