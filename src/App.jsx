@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // Pages
 import Home from "./pages/Home";
 import Posts from "./pages/Posts";
+import AddNewPost from "./pages/AddNewPost";
 import About from "./pages/About";
 
 // Components
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/posts" element={<Posts />} />
           <Route path="/about" element={<About />} />
+          <Route path="/add-new-post" element={<AddNewPost />} />
         </Routes>
         <Footer />
       </div>
